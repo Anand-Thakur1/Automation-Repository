@@ -43,6 +43,7 @@ public class Guru99 {
 		act.dragAndDrop(rk3, kr3).perform();
 		Thread.sleep(2000);
 		act.dragAndDrop(rk4, kr4).perform();
+		driver.quit();
 		
 		
 		
