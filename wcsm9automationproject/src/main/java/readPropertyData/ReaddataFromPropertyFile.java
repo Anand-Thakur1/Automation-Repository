@@ -8,10 +8,9 @@ public class ReaddataFromPropertyFile {
 
 	public static void main(String[] args) throws IOException {
 		
-		FileInputStream fis = new FileInputStream("./src/main/resources/configuration.properties");
+		FileInputStream fis = new FileInputStream("./src/main/resources/config.properties");
 		Properties p = new Properties();
 		p.load(fis);
-		
 		String data = p.getProperty("Username");
 		System.out.println(data);
 		
