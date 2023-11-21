@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,7 +31,7 @@ public static void main(String[] args) throws InterruptedException, IOException 
 		Thread.sleep(2000);
 		jse.executeScript("window.scrollBy("+xaxis+","+yaxis+")");
 		jse.executeScript("document.getElementById('tb2').value='anand'");
-		TakesScreenshot ts = (TakesScreenshot)driver;
+		WebElement ts = driver.findElement(By.id("tb2"));
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File ss = new File("./Screenshot/omayoss.png");
 		Files.copy(src, ss);
